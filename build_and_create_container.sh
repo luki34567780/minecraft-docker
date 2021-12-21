@@ -15,8 +15,8 @@ cp plugins /docker/minecraft_1.17.1_server/ -r
 
 docker run \
     -d \
+    --restart unless-stopped \
     --name "minecraft_1.17.1_server" \
-    --publish 9001:9001 \
-    --publish 9030:9030 \
+    --publish 25565:25565 \
     -v /docker/minecraft_1.17.1_server:/data/ \
     tor_image
